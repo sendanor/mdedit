@@ -88,6 +88,11 @@ if(argv['merge-tables']) {
 		});
 	});
 
+	res = res.sort(function(a, b) {
+		if(a[table_file_title] === b[table_file_title]) { return 0; }
+		return a[table_file_title] < b[table_file_title] ? -1 : 1;
+	});
+
 	if(argv['to-json']) {
 		console.log(JSON.stringify(res, null, 2));
 	} else {
