@@ -92,7 +92,7 @@ if(argv['merge-tables']) {
 		console.log(JSON.stringify(res, null, 2));
 	} else {
 		console.log(output_title);
-		console.log('====');
+		console.log('====\n');
 		var keys = Array.prototype.concat.apply([], res.map(function(x) { return Object.keys(x); })).reverse().filter(function(e, i, arr) {return arr.indexOf(e, i+1) === -1;}).reverse();
 		var values = res.map(function(x){
 			return keys.map(function(key) { return x[key]; });
