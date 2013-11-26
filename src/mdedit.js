@@ -103,7 +103,7 @@ if(argv['merge-tables']) {
 			return keys.map(function(key) { return x[key]; });
 		});
 		console.log( '| ' + keys.join(' | ') + ' |');
-		console.log( '| ' + keys.map(function(k) { return '---'; }).join(' | ') + ' |');
+		console.log( '| ' + keys.map(function(k) { return '---' + ((k === table_file_title)?'':':'); }).join(' | ') + ' |');
 		values.forEach(function(value) {
 			console.log( '| ' + value.join(' | ') + ' |');
 		})
